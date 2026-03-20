@@ -101,9 +101,21 @@ td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align:
   h2 { font-size: 18px; }
   .steps { flex-direction: column; gap: 12px; }
   .step-arrow { display: none; }
-  .bet-card-data { grid-template-columns: repeat(2, 1fr); }
-  .strategy-grid { grid-template-columns: 1fr; }
+  .bet-card { padding: 14px 16px; margin: 12px 0 20px; }
+  .bet-card-horse { font-size: 16px; }
+  .bet-card-data { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .bet-card-data dd { font-size: 16px; }
+  .strategy-grid { grid-template-columns: 1fr; gap: 8px; }
   .sb-prime, .sb-place { grid-column: 1; }
+  .strategy-box { padding: 12px 14px; }
+  .strategy-box-title { font-size: 13px; }
+  .strategy-box-desc { font-size: 11px; }
+  .merge-arrow { font-size: 11px; padding: 4px 0; }
+  table { font-size: 13px; }
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-wrap table { white-space: nowrap; }
+  .screenshot img { max-width: 100%; height: auto; }
+  .flow-box { min-width: auto; font-size: 11px; padding: 8px 10px; }
   .screenshot { flex-direction: column; align-items: center; }
   .flow { flex-direction: column; }
   .flow-arrow { display: none; }
@@ -176,16 +188,19 @@ td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align:
 
 <h3>ヘッダー</h3>
 <p>ロゴの右にあるメニュー（≡）をタップすると、以下の設定を変更できます。</p>
+<div class="table-wrap">
 <table>
   <tr><th>項目</th><th>説明</th></tr>
   <tr><td><strong>日付</strong></td><td>表示する開催日を選択（自動で当日が設定されます）</td></tr>
   <tr><td><strong>資金（¥）</strong></td><td>あなたの資金額を入力（初期値: ¥100,000）</td></tr>
   <tr><td><strong>オッズ切替</strong></td><td>予測オッズとリアルタイムオッズの切替</td></tr>
 </table>
+</div>
 <p>資金額はブラウザに保存されるので、毎回入力する必要はありません。</p>
 
 <h3>タブバー</h3>
 <p>5つのタブで情報を切り替えます。各タブ名の横の数字は推奨件数です。</p>
+<div class="table-wrap">
 <table>
   <tr><th>タブ</th><th>内容</th></tr>
   <tr><td><strong>レース</strong></td><td>全レース一覧（開催場別）で、各レースの出走馬を確認できます</td></tr>
@@ -194,6 +209,7 @@ td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align:
   <tr><td><span class="badge badge-ev">EV</span></td><td>期待値が最も高く、独自のフィルタ条件を満たした馬</td></tr>
   <tr><td><span class="badge badge-place">Place</span></td><td>複勝（3着以内）で期待値が高い馬</td></tr>
 </table>
+</div>
 
 <h2>4つの推奨</h2>
 
@@ -272,6 +288,7 @@ td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align:
   </dl>
 </div>
 
+<div class="table-wrap">
 <table>
   <tr><th>項目</th><th>説明</th></tr>
   <tr><td><strong>勝率</strong></td><td>モデルが予測した勝率（Placeタブでは複勝率）で、モデルが算出した値をそのまま表示しているため全馬の合計が100%にならない場合があります</td></tr>
@@ -279,6 +296,7 @@ td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align:
   <tr><td><strong>EV（期待値）</strong></td><td>勝率 × オッズで、1.0を超えると理論上プラス（高いほど狙い目）</td></tr>
   <tr><td><strong>ベット</strong></td><td>数理モデルに基づき、資金額から最適額を自動算出した推奨賭け金</td></tr>
 </table>
+</div>
 
 <h2>レースタブの使い方</h2>
 <p>レースタブでは全レースがアコーディオン形式で一覧表示されます。</p>
@@ -342,6 +360,7 @@ td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align:
 </ul>
 
 <h2>用語集</h2>
+<div class="table-wrap">
 <table>
   <tr><th>用語</th><th>説明</th></tr>
   <tr><td><strong>EV（期待値）</strong></td><td>Expected Value（勝率 × オッズ）で、1.0以上なら理論上プラス</td></tr>
@@ -349,6 +368,7 @@ td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align:
   <tr><td><strong>ヘッジ複勝（H）</strong></td><td>単勝推奨馬の複勝も購入する手法で、いわゆる「単複」（カードの <code>H</code> マークが目印）</td></tr>
   <tr><td><strong>ベット額</strong></td><td>資金額に対する最適な賭け金で、数理モデルにより自動算出</td></tr>
 </table>
+</div>
 
 <h2>よくある質問</h2>
 
